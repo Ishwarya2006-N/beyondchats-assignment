@@ -9,7 +9,18 @@ const connectDB = require("./config/db");
 connectDB();
 
 const cors = require("cors");
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000", // local dev
+      "https://beyondchats-assignment-1-3e5n.onrender.com" // frontend live URL
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
+
 
 
 const scrapeBeyondChatsBlogs = require("./scrapers/beyondchatsScraper");

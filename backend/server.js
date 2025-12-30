@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", // local dev
-      "https://beyondchats-assignment-1-3e5n.onrender.com" // frontend live URL
+      "https://beyondchats-assignment-4gs4.vercel.app" // frontend live URL
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
